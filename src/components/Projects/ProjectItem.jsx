@@ -2,8 +2,8 @@ import { memo } from "react";
 
 const ProjectItem = ({ data }) => {
   return (
-    <div className="w-[990px] h-[400px] flex items-center justify-center gap-5 mx-auto shadow-lg px-5 my-10 rounded-md">
-      <div className="min-w-[530px] max-w-[620px] max-h-[300px] h-auto overflow-hidden rounded-2xl shadow-md">
+    <div className="lg:w-[990px] lg:h-[400px] sm:w-[600px] w-[300px] flex lg:flex-row flex-col items-center justify-center lg:gap-x-5 gap-y-8 mx-auto shadow-lg px-5 lg:py-0 py-5 my-10 rounded-md">
+      <div className="sm:min-w-[530px] sm:max-w-[620px] sm:max-h-[300px] max-h-[200px] h-auto overflow-hidden rounded-2xl shadow-md">
         <a href={data?.demo}>
           <img
             src={data?.image}
@@ -18,7 +18,10 @@ const ProjectItem = ({ data }) => {
         <div className="flex items-center justify-center gap-x-5 mb-10">
           {data?.tech?.map((item) => {
             return (
-              <span key={item} className="px-3 py-2 rounded-sm shadow-md">
+              <span
+                key={item}
+                className="sm:px-3 sm:py-2 px-2 py-1 rounded-sm shadow-md"
+              >
                 {item}
               </span>
             );

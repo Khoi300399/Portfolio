@@ -37,20 +37,20 @@ const Intro = () => {
   };
 
   return (
-    <div className="bg-[url('../../assets/image/bg1.png')] bg-contain bg-no-repeat py-16 pt-40">
-      <div className="flex items-center justify-center gap-x-10 mb-10">
-        <div className="w-[500px]">
-          <h1 className="text-[#6b7280] text-6xl font-bold mb-5 font-serif select-none">
+    <div className="bg-[url('../../assets/image/bg1.png')] md:bg-cover bg-no-repeat sm:py-16 py-8 sm:pt-40 pt-20">
+      <div className="flex lg:flex-row flex-col-reverse items-center justify-center lg:gap-x-10 gap-y-10 mb-10">
+        <div className="md:w-[500px]">
+          <h1 className="text-[#6b7280] sm:text-6xl text-4xl lg:text-left text-center font-bold mb-5 font-serif select-none">
             Front-End Developer
           </h1>
-          <p className="font-mono text-xl mb-8 select-none">
+          <p className="font-mono text-xl mb-8  lg:text-left text-center select-none ">
             Hi, I'm{" "}
-            <span className="text-[#f55f8d] font-semibold">Ma Thanh Khoi</span>.
-            A passionate Front-end React Developer based in Ho Chi Minh
+            <span className="text-[#f55f8d] font-semibold ">Ma Thanh Khoi</span>
+            . A passionate Front-end React Developer based in Ho Chi Minh
             city,Viet Nam.📍
           </p>
 
-          <div className="flex items-center gap-x-10">
+          <div className="flex items-center gap-x-10 lg:justify-start justify-center">
             <span className="font-sans font-medium text-4xl hover:text-[#f55f8d] transition-all ease-linear">
               <a href="https://github.com/Khoi300399">
                 <i className="fa-brands fa-github"></i>
@@ -67,7 +67,7 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="w-[350px] h-[350px] rounded-full ">
+        <div className="sm:w-[350px] sm:h-[350px] w-[250px] h-[250px] rounded-full ">
           <img
             src="./image/avatar.jpg"
             alt=""
@@ -76,19 +76,19 @@ const Intro = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-x-10 mb-10">
-        <p className="border-r-2 border-r-[#6b7280] pr-10 text-lg font-sans font-semibold">
+      <div className="flex items-center justify-center mb-10">
+        <p className="border-r-2 border-r-[#6b7280] pr-10 text-lg font-sans font-semibold sm:block hidden">
           Tech Stack
         </p>
-        <ul className="flex items-center gap-8">
+        <ul className="flex items-center sm:gap-x-8 gap-4">
           {logoList.map(({ name, src }) => {
             return (
               <li
                 key={name}
                 title={name}
-                className="w-16 h-16 bg-white flex items-center justify-center rounded-full shadow-lg"
+                className="md:w-16 md:h-16 w-10 h-10 bg-white flex items-center justify-center rounded-full shadow-lg"
               >
-                <img src={src} alt={name} className="w-10 h-10" />
+                <img src={src} alt={name} className="md:w-10 md:h-10 w-5 h-5" />
               </li>
             );
           })}
