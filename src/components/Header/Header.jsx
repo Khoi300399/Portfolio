@@ -42,7 +42,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <div className="fixed top-0 right-0 left-0">
+    <div className="fixed top-0 right-0 left-0 z-50">
       <div className="flex items-center justify-between max-w-full sm:px-16 px-3 py-1 shadow-md">
         <div className="w-12">
           <img
@@ -83,7 +83,7 @@ const Header = () => {
         </ul>
         <ul
           ref={nodeRef}
-          className={`text-lg font-semibold text-[#070120] fixed top-0 right-0 bottom-0 bg-white w-[300px] block py-10 shadow-lg text-center transition-all ease-linear duration-200 z-50 ${
+          className={`text-lg font-semibold text-[#070120] fixed top-0 right-0 bottom-0 bg-white w-[300px] block py-10 shadow-lg text-center transition-all ease-linear duration-200  ${
             isMenu ? "translate-x-0" : "translate-x-full"
           } `}
         >
