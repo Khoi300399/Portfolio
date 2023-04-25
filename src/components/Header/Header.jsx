@@ -83,8 +83,8 @@ const Header = () => {
         </ul>
         <ul
           ref={nodeRef}
-          className={`text-lg font-semibold text-[#070120] fixed top-0 right-0 bottom-0 bg-white w-[300px] block py-10 shadow-lg text-center transition-all ease-linear ${
-            isMenu ? "" : "translate-x-full"
+          className={`text-lg font-semibold text-[#070120] fixed top-0 right-0 bottom-0 bg-white w-[300px] block py-10 shadow-lg text-center transition-all ease-linear duration-200 z-50 ${
+            isMenu ? "translate-x-0" : "translate-x-full"
           } `}
         >
           {linkList.map(({ title, url }) => {
