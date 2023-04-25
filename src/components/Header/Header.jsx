@@ -22,9 +22,15 @@ const linkList = [
 const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
   const nodeRef = useRef(null);
+  const Ref = useRef(null);
   useEffect(() => {
     function handleOutside(e) {
-      if (nodeRef.current && !nodeRef.current.contains(e.target)) {
+      if (
+        nodeRef.current &&
+        Ref.current &&
+        !nodeRef.current.contains(e.target) &&
+        !Ref.current.contains(e.target)
+      ) {
         setIsMenu(false);
       }
     }
@@ -47,7 +53,7 @@ const Header = () => {
         </div>
 
         <div
-          ref={nodeRef}
+          ref={Ref}
           className="lg:hidden text-2xl"
           onClick={() => {
             setIsMenu(true);
