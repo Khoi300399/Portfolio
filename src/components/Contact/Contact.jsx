@@ -10,7 +10,7 @@ const Contact = () => {
             Don't be shy! Hit me up! 👇
           </h4>
         </div>
-        <div className="w-full flex lg:flex-row flex-col items-center justify-center lg:gap-x-20 gap-y-10">
+        <div className="w-full flex lg:flex-row flex-col sm:items-center items-start sm:justify-center justify-start lg:gap-x-20 gap-y-10">
           <div className="flex items-center gap-x-5">
             <div className="flex items-center justify-center w-20 h-20 p-5 rounded-full text-blue-500 shadow-lg text-3xl">
               <i className="fa-solid fa-map-location-dot"></i>
