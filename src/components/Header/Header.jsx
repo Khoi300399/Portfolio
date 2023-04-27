@@ -20,6 +20,7 @@ const linkList = [
   },
 ];
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
   const nodeRef = useRef(null);
   const Ref = useRef(null);
@@ -41,9 +42,27 @@ const Header = () => {
       document.removeEventListener("click", handleOutside);
     };
   }, []);
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollTop = window.pageYOffset;
+      const threshold = 50; // ngưỡng cuộn trang để thêm class
+      setIsScrolled(scrollTop > threshold);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="fixed top-0 right-0 left-0 z-50">
-      <div className="flex items-center justify-between max-w-full sm:px-16 px-3 py-1 shadow-md">
+      <div
+        className={`flex items-center justify-between max-w-full sm:px-16 px-3 py-1 ${
+          isScrolled ? "shadow-md backdrop-blur-lg" : ""
+        } `}
+      >
         <div className="w-12">
           <img
             src="./image/logo.png"

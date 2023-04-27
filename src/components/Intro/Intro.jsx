@@ -37,7 +37,7 @@ const Intro = () => {
   };
 
   return (
-    <div className="bg-[url('../../assets/image/bg1.png')] md:bg-cover bg-no-repeat sm:py-16 py-8 sm:pt-40 pt-20">
+    <div className="bg-[url('../../assets/image/bg1.png')] md:bg-contain bg-cover bg-no-repeat sm:py-16 py-8 sm:pt-40 pt-20">
       <div className="flex lg:flex-row flex-col-reverse items-center justify-center lg:gap-x-10 gap-y-10 mb-10">
         <div className="md:w-[500px]">
           <h1 className="text-[#6b7280] sm:text-6xl text-4xl lg:text-left text-center font-bold mb-5 font-serif select-none">
@@ -58,7 +58,7 @@ const Intro = () => {
             </span>
             <div>
               <button
-                className="btn-download transition-all ease-linear px-5 py-3 rounded-3xl text-white font-semibold font-mono"
+                className="btn-download transition-all ease-linear px-5 py-3 rounded-3xl text-white font-semibold font-mono shadow-lg"
                 onClick={downloadCV}
               >
                 Download CV
@@ -77,7 +77,7 @@ const Intro = () => {
       </div>
 
       <div className="flex items-center justify-center mb-10">
-        <p className="border-r-2 border-r-[#6b7280] pr-10 text-lg font-sans font-semibold sm:block hidden">
+        <p className="border-r-2 border-r-[#6b7280] sm:pr-10 sm:mr-10 text-lg font-sans font-semibold sm:block hidden">
           Tech Stack
         </p>
         <ul className="flex items-center sm:gap-x-8 gap-4">

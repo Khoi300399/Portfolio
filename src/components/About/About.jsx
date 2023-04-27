@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex justify-center gap-x-10 mb-10 bg-[url('../../assets/image/bg2.png')] bg-contain bg-no-repeat py-20"
+      className="flex justify-center gap-x-10 mb-10 bg-[url('../../assets/image/bg2.png')] md:bg-contain bg-cover bg-no-repeat py-20"
     >
       <div className="w-96 lg:block hidden">
         <img
