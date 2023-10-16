@@ -7,7 +7,7 @@ const ProjectItem = ({ data }) => {
         <a href={data?.demo}>
           <img
             src={data?.image}
-            alt="jira"
+            alt={data?.name}
             className={`object-cover w-full h-auto rounded-lg translate-y-[0%] transition-all ease-in-out duration-[10s] ${data?.status}`}
           />
         </a>

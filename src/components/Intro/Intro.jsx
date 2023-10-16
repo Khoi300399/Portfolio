@@ -4,26 +4,52 @@ const logoList = [
   {
     name: "HTML 5",
     src: "./image/html.png",
+    link: "https://www.w3schools.com/html/",
   },
   {
     name: "CSS 3",
     src: "./image/css.png",
+    link: "https://www.w3schools.com/css/default.asp",
   },
   {
     name: "JAVASCRIPT",
     src: "./image/javascript.png",
+    link: "https://www.w3schools.com/js/default.asp",
   },
   {
     name: "REACT",
     src: "./image/react.png",
+    link: "https://react.dev/",
+  },
+  {
+    name: "ANGULAR",
+    src: "./image/angular.png",
+    link: "https://angular.io/",
+  },
+  {
+    name: "PUG",
+    src: "./image/pug.png",
+    link: "https://pugjs.org/api/getting-started.html",
   },
   {
     name: "TAILWIND",
     src: "./image/tailwind.png",
+    link: "https://tailwindcss.com/",
   },
   {
     name: "SASS/SCSS",
     src: "./image/sass.png",
+    link: "https://sass-lang.com/",
+  },
+  {
+    name: "REDUX",
+    src: "./image/redux.png",
+    link: "https://redux.js.org/",
+  },
+  {
+    name: "NGRX",
+    src: "./image/ngrx.png",
+    link: "https://ngrx.io/",
   },
 ];
 
@@ -46,8 +72,8 @@ const Intro = () => {
           <p className="font-mono text-xl mb-8  lg:text-left text-center select-none ">
             Hi, I'm{" "}
             <span className="text-[#f55f8d] font-semibold ">Ma Thanh Khoi</span>
-            . A passionate Front-end React Developer based in Ho Chi Minh
-            city,Viet Nam.📍
+            . A passionate Front-end Developer based in Ho Chi Minh city,Viet
+            Nam.
           </p>
 
           <div className="flex items-center gap-x-10 lg:justify-start justify-center">
@@ -80,15 +106,22 @@ const Intro = () => {
         <p className="border-r-2 border-r-[#6b7280] sm:pr-10 sm:mr-10 text-lg font-sans font-semibold sm:block hidden">
           Tech Stack
         </p>
-        <ul className="flex items-center sm:gap-x-8 gap-4">
-          {logoList.map(({ name, src }) => {
+        <ul className="flex items-center justify-center flex-wrap sm:gap-x-8 gap-4">
+          {logoList.map(({ name, src, link }) => {
             return (
               <li
                 key={name}
                 title={name}
-                className="md:w-16 md:h-16 w-10 h-10 bg-white flex items-center justify-center rounded-full shadow-lg"
+                className="md:w-16 md:h-16 w-14 h-14 bg-white flex items-center justify-center rounded-full cursor-pointer shadow-lg"
               >
-                <img src={src} alt={name} className="md:w-10 md:h-10 w-5 h-5" />
+                <a href={link} target="_blank">
+                  {" "}
+                  <img
+                    src={src}
+                    alt={name}
+                    className="md:w-10 md:h-10 w-5 h-5"
+                  />
+                </a>
               </li>
             );
           })}

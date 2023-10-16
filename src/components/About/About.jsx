@@ -22,11 +22,11 @@ const About = () => {
         </h4>
         <p className="text-[#6b7280] text-lg text-left sm:px-0 px-5">
           As a Fresher Front-End Developer, I possess an impressive arsenal of
-          skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I excel in
-          designing and maintaining responsive websites that offer a smooth user
-          experience. My expertise lies in crafting dynamic, engaging interfaces
-          through writing clean and optimized code and utilizing cutting-edge
-          development tools and techniques.
+          skills in HTML, CSS, JavaScript, React, Angular, Tailwind, and SCSS. I
+          excel in designing and maintaining responsive websites that offer a
+          smooth user experience. My expertise lies in crafting dynamic,
+          engaging interfaces through writing clean and optimized code and
+          utilizing cutting-edge development tools and techniques.
         </p>
       </div>
     </div>
